@@ -42,7 +42,7 @@ export default function About({}: Props) {
             alt="MY PIC"
             layout="fill"
             objectFit="cover"
-            className="rounded-full md:rounded-lg"
+            className="rounded-full md:rounded-lg pt-2"
           />
         </div>
       </motion.div>

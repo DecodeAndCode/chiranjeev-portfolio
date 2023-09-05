@@ -1,12 +1,29 @@
 import React from "react";
-import firebase from "../public/firebase.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import projectImg from "../public/project.png";
 
 type Props = {};
 
 export default function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+  const projects = [
+    {
+      projectName: "Vibe Chat",
+      description: `Built secure chat app with real-time messaging using Flutter and
+      Firebase, employing robust authentication for data privacy and
+      seamless UI toolkit for user experience.`,
+    },
+    {
+      projectName: "ChatGPT Mobile App",
+      description: `Created a ChatGPT like App with 90% accuracy using the Flutter SDK
+      for a seamless user experience for cross plarform users.`,
+    },
+    {
+      projectName: "Todo List App",
+      description: `Created a clean architecture-based To-Do list app in Flutter with a user-friendly interface for adding, editing, and deleting tasks.
+      Employed the provider package for state management, enabling real-time updates across different screens for an enhanced user experience.`,
+    },
+  ];
   return (
     <motion.div
       initial={{
@@ -28,7 +45,7 @@ export default function Projects({}: Props) {
         {projects.map((project, i) => {
           return (
             <div
-              key={projects[project]}
+              key={project.projectName}
               className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:44 h-screen"
             >
               <motion.div
@@ -47,21 +64,17 @@ export default function Projects({}: Props) {
                   once: true,
                 }}
               >
-                <Image src={firebase} alt="" className="h-32 w-32"></Image>
+                <Image src={projectImg} alt="" className="h-auto w-90"></Image>
               </motion.div>
               <div className="space-y-10 px-10 md:px-10 max-w-6xl">
                 <h4 className="text-4xl font-semibold text-center">
                   <span className="underline decoration-[#F7AB0A]/50">
                     Case study {i + 1} of {projects.length} :
                   </span>{" "}
-                  chatGPT clone
+                  {project.projectName}
                 </h4>
                 <p className="text-lg text-center md:text-left">
-                  Sure, heres a randomly generated text for you: In a world
-                  where technology and creativity intertwine, possibilities
-                  become endless. Ideas emerge like constellations in the night
-                  sky, forming patterns of innovation that push the boundaries
-                  of what we thought was achievable. The digital realm dances
+                  {project.description}
                 </p>
               </div>
             </div>

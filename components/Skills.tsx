@@ -25,23 +25,19 @@ export default function Skills({}: Props) {
         Hover over a skill for current proficiency
       </h3>
 
-      <div className="grid grid-cols-4 gap-5 mt-20">
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
+      <div className="grid grid-cols-4 gap-4 pt-[100px] md:pt-20 sm:pt-10 lg:pt-[100px]">
+        <Skill percentage="95%" skillType="flutter"/>
+        <Skill percentage="80%" skillType="ts"/>
+        <Skill percentage="90%" skillType="js"/>
+        <Skill percentage="90%" skillType="node"/>
+        <Skill percentage="90%" skillType="dart"/>
+        <Skill percentage="85%" skillType="firebase"/>
+        <Skill percentage="100%" skillType="vscode"/>
+        <Skill percentage="70%" skillType="nextjs"/>
+        <Skill percentage="80%" skillType="react"/>
+        <Skill percentage="80%" skillType="mongo"/>
+        <Skill percentage="70%" skillType="tailwind"/>
+        <Skill percentage="100%" skillType="postman"/>
       </div>
     </motion.div>
   );
