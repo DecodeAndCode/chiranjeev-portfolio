@@ -1,4 +1,4 @@
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 

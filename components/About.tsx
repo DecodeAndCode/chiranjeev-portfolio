@@ -12,14 +12,14 @@ export default function About({}: Props) {
         opacity: 0,
       }}
       transition={{
-        duration:1.5
+        duration: 1.5,
       }}
       whileInView={{
         opacity: 1,
       }}
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
       <motion.div
@@ -36,11 +36,15 @@ export default function About({}: Props) {
         }}
         viewport={{ once: true }}
       >
-        <Image
-          src={mypic}
-          alt="MY PIC"
-          className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]" // image problem
-        ></Image>
+        <div className="relative w-64 h-64 md:w-72 md:h-72 xl:w-96 xl:h-96">
+          <Image
+            src={mypic}
+            alt="MY PIC"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-full md:rounded-lg"
+          />
+        </div>
       </motion.div>
 
       <div className="space-y-10 px-0 md:px-10">
@@ -50,14 +54,7 @@ export default function About({}: Props) {
           background
         </h4>
         <p className="text-base">
-          Sure, heres a randomly generated text for you: In a world where
-          technology and creativity intertwine, possibilities become endless.
-          Ideas emerge like constellations in the night sky, forming patterns of
-          innovation that push the boundaries of what we thought was achievable.
-          The digital realm dances with the analog world, and together they
-          compose a symphony of progress, echoing the rhythm of human ingenuity.
-          As the sun sets on one horizon, it rises on another, illuminating the
-          path to discovery with a curiosity that knows no bounds.
+        Hello, I&apos;m a passionate Fullstack Developer with a flair for crafting both web and mobile applications. My journey in the tech world is fueled by a relentless drive to contribute to open source projects and explore the exciting realms of crypto and web3 technologies. Whether it&apos;s building innovative solutions or diving into the fascinating world of blockchain and cryptocurrencies, I&apos;m always eager to push the boundaries of what&apos;s possible. Join me on this thrilling adventure where we code, collaborate, and make a positive impact in the ever-evolving landscape of technology.
         </p>
       </div>
     </motion.div>
